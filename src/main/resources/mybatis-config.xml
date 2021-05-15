@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- MyBatis的全局配置文件 -->
+<configuration>
+    <!--1.配置开发环境-->
+    <environments default="dev">
+        <environment id="dev">
+            <!--1.1.配置事务管理方式
+            JDBC:将事务交给JDBC管理(mybatis会自动开启事务,但需要手动提交)
+            MANAGED:自己手动管理事务
+            -->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--1.2.配置连接池信息,type的取值:
+            JNDI:已过时
+            UNPOOLED:不使用连接池
+            POOLED:使用连接池(可以减少连接创建次数,提高执行效率)-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///yonghedb?characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--2.导入xxxMapper.xml文件(如果mapper文件有多个,
+    可以通过多个mapper标签导入)
+    resource属性会直接到类目录下去找指定位置的文件-->
+    <mappers>
+        <mapper resource="EmpMapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:用于标识当前这个mapper文件(就是一个名字)
+    在mybatis程序中需要通过这个名字来定位当前这个mapper文件
+    通过namespace值+id值可以定位要执行的是那条SQL语句-->
+<mapper namespace="cn.tedu.dao.EmpMapper">
+    <!--通过select,insert,update,delete这四个标签来存放要执行的SQL语句-->
+    <!--练习01:查询emp表中的所有员工信息
+    id属性:要求当前这个文件中的id值必须是唯一的,不能重复
+    resultType属性:指定查询的结果要存放在哪个类型的对象中
+    -->
+    <select id="findAll" resultType="cn.tedu.pojo.Emp">select * from emp</select>
+    <!--练习02:新增员工信息:赵云 保安 6000-->
+    <insert id="insert">insert into emp value(null,'赵云','保安',6000)</insert>
+    <!--练习03:修改员工信息:赵云保镖2000-->
+    <update id="update">update emp set job='保镖',salary=20000 where name='赵云'</update>
+    <delete id="delete">delete from emp where name='赵云'</delete>
+    <insert id="insert2">
+        insert into emp value( null, #{name}, #{job}, #{salary} )
+    </insert>
+    <update id="update2">
+        update emp set job=#{job},salary=#{salary} where name=#{name}
+    </update>
+    <delete id="delete2">
+        delete from emp where id=#{empId}
+    </delete>
+    <select id="findAll2" resultType="cn.tedu.pojo.Emp">
+        select ${colStr} from emp
+    </select>
+    <!--动态SQL标签-->
+    <!--练习10:根据员工的薪资区间查询员工信息-->
+    <select id="findBySal" resultType="cn.tedu.pojo.Emp">
+        select * from emp where 1=1
+        <if test="minSal != null">
+         and salary > #{minSal}
+        </if>
+        <if test="maxSal !=null">
+            and salary &lt; #{maxSal}
+        </if>
+    </select>
+
+    <select id="findBySal2" resultType="cn.tedu.pojo.Emp">
+        select * from emp
+        <where>
+
+        <if test="minSal != null">
+             salary > #{minSal}
+        </if>
+        <if test="maxSal !=null">
+            and salary &lt; #{maxSal}
+        </if>
+        </where>
+    </select>
+
+    <delete id="deleteByIds">
+        delete from emp where id in
+        <foreach collection="array" open="(" item="id" separator="," close=")">
+            #{id} /*遍历几次*/
+        </foreach>
+    </delete>
+    <!--根据员工的id批量更新员工信息id数组 int ids = {2,4,6,8} 加薪1000-->
+    <update id="updateByIds">
+        update emp set salary = salary + #{money} where id in
+        <foreach collection="ids" open="(" item="id" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>
