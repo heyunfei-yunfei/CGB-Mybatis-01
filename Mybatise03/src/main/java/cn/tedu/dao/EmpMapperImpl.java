@@ -41,5 +41,13 @@ public class EmpMapperImpl implements EmpMapper {
 
     }
 
+    @Override
+    public Emp selectOne(String s, int i) {
+
+        Emp emp = session.selectOne(s,i);
+        return emp;
+
+    }
+
 
 }

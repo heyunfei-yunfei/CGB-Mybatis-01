@@ -20,7 +20,7 @@ public class MybatisTest01 {
         SqlSession session = factory.openSession();
         //Connection
         //4.通过namespace+id找到并执行SQL语句,返回处理后的结果
-        List<Emp> list = session.selectList("EmpMapper.findAll");
+        List<Emp> list = session.selectList("cn.tedu.dao.EmpMapper.findAll");
         //5.输出结果
         for (Emp e:list) {
             System.out.println(e);

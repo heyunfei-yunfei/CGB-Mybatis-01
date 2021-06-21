@@ -29,7 +29,7 @@
     可以通过多个mapper标签导入)
     resource属性会直接到类目录下去找指定位置的文件-->
     <mappers>
-        <!--<mapper resource="EmpMapper.xml"/>-->
+       <!-- <mapper resource="EmpMapper.xml"/>-->
         <!--<mapper class="cn.tedu.dao.EmpMapper"/>-->
         <package name="cn.tedu.dao"/>
     </mappers>

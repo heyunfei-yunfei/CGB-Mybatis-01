@@ -18,4 +18,6 @@ public interface EmpMapper {
     //修改员工信息:将马玉的之为改为"CEO",薪资改为80000(有占位符)
     public void update2(Emp emp);
 
+
+    Emp selectOne(String s, int i);
 }

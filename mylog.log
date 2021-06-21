@@ -280,3 +280,51 @@ DEBUG [main] 2021-04-28 08:16:39 - Not a JAR: file:/E:/EMaven/Mybatis04/target/c
 DEBUG [main] 2021-04-28 08:16:39 - Reader entry: Êþº¾   4 b
 DEBUG [main] 2021-04-28 08:16:39 - Checking to see if class cn.tedu.dao.EmpMapper matches criteria [is assignable to Object]
 DEBUG [main] 2021-04-28 08:16:39 - Checking to see if class cn.tedu.dao.EmpMapperImpl matches criteria [is assignable to Object]
+DEBUG [main] 2021-06-19 04:24:36 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-19 04:24:36 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 04:24:36 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 04:24:36 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 04:24:36 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 04:24:36 - Opening JDBC Connection
+DEBUG [main] 2021-06-19 04:24:37 - Created connection 1629911510.
+DEBUG [main] 2021-06-19 04:24:37 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@612679d6]
+DEBUG [main] 2021-06-19 04:24:37 - ==>  Preparing: select * from emp 
+DEBUG [main] 2021-06-19 04:24:37 - ==> Parameters: 
+DEBUG [main] 2021-06-19 04:24:37 - <==      Total: 8
+DEBUG [main] 2021-06-19 05:14:52 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-19 05:14:52 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:14:52 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:14:52 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:14:52 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:15:50 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-19 05:15:50 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:15:50 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:15:50 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:15:50 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-19 05:15:51 - Opening JDBC Connection
+DEBUG [main] 2021-06-19 05:15:51 - Created connection 854507466.
+DEBUG [main] 2021-06-19 05:15:51 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@32eebfca]
+DEBUG [main] 2021-06-19 05:15:51 - ==>  Preparing: select * from emp 
+DEBUG [main] 2021-06-19 05:15:51 - ==> Parameters: 
+DEBUG [main] 2021-06-19 05:15:51 - <==      Total: 9
+DEBUG [main] 2021-06-21 05:01:49 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-21 05:01:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:01:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:01:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:01:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:02:41 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-21 05:02:41 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:02:41 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:02:41 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:02:41 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:03:28 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] 2021-06-21 05:03:28 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:03:28 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:03:28 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:03:28 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] 2021-06-21 05:03:28 - Opening JDBC Connection
+DEBUG [main] 2021-06-21 05:03:29 - Created connection 490150701.
+DEBUG [main] 2021-06-21 05:03:29 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1d371b2d]
+DEBUG [main] 2021-06-21 05:03:29 - ==>  Preparing: select * from emp 
+DEBUG [main] 2021-06-21 05:03:29 - ==> Parameters: 
+DEBUG [main] 2021-06-21 05:03:29 - <==      Total: 9

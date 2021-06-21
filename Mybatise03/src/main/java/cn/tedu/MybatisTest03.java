@@ -28,8 +28,8 @@ public class MybatisTest03 {
         session = factory.openSession(true);
         //true:表示自动提交业务,默认false表示手动提交
     }
-    @Test
 
+    @Test
     public void testFinAll(){
         //获取EmpMapper接口的子类(由mybatis提供)的对象实例
         EmpMapper mapper = session.getMapper(EmpMapper.class);
@@ -38,6 +38,13 @@ public class MybatisTest03 {
         for (Emp e:list) {
             System.out.println(e);
         }
+    }
+
+    @Test
+    public void testFindById(){
+        EmpMapper mapper = session.getMapper(EmpMapper.class);
+        Emp emp = mapper.selectOne("cn.tedu.dao.EmpMapper.findById",1);
+        System.out.println(emp);
     }
     @Test
     public void testFindAll2(){

@@ -30,5 +30,6 @@
     resource属性会直接到类目录下去找指定位置的文件-->
     <mappers>
         <mapper resource="EmpMapper.xml"/>
+
     </mappers>
 </configuration>

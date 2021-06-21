@@ -5,13 +5,16 @@
 <!--namespace:用于标识当前这个mapper文件(就是一个名字)
     在mybatis程序中需要通过这个名字来定位当前这个mapper文件
     通过namespace值+id值可以定位要执行的是那条SQL语句-->
-<mapper namespace="EmpMapper">
+<mapper namespace="cn.tedu.dao.EmpMapper">
+
     <!--通过select,insert,update,delete这四个标签来存放要执行的SQL语句-->
     <!--练习01:查询emp表中的所有员工信息
     id属性:要求当前这个文件中的id值必须是唯一的,不能重复
     resultType属性:指定查询的结果要存放在哪个类型的对象中
     -->
     <select id="findAll" resultType="cn.tedu.pojo.Emp">select * from emp</select>
+
+    <select id="findById" resultType="cn.tedu.pojo.Emp">select * from emp where id=#{id}</select>
     <!--练习02:新增员工信息:赵云 保安 6000-->
     <insert id="insert">insert into emp value(null,'赵云','保安',6000)</insert>
     <!--练习03:修改员工信息:赵云保镖2000-->
